@@ -1,0 +1,52 @@
+version: '3'
+services:
+         dbos:
+                 images: mysql:5.7
+                 volumes:
+ghost_db_storage:/var/lib/mysql
+                restart: always
+                environment:
+MY_ROOT_PASSWORD: rootpasswd
+                     MY_SQL_USER:
+ANKIT 
+                     MY_SQL_PASSWORD:
+linux
+                     MY_SQL_DATABASE:
+mydata 
+         ghostos:
+                 image:ghost
+                 restart: always
+                 depend_on:
+                        - dbos
+                 port:
+                        - 8080:2368
+                 volumes:
+                         -
+ghostos_storage:/var/lib/ghost
+                environment:
+                        database_client:
+mysql
+
+database_connection_host: dbos
+ 
+database_connection_user: ANKIT
+
+database_connection__password: linux
+
+database_connection_database: mydata
+
+volumes: 
+        ghost_db_storage:
+        ghost0s_storage:
+
+
+
+
+
+
+
+
+
+
+
+               
